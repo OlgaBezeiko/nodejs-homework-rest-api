@@ -1,5 +1,6 @@
-const express = require('express')
-const logger = require('morgan')
+import express from 'express';
+import logger from 'morgan';
+
 
 const cors = require('cors')
 
@@ -23,7 +24,7 @@ app.use((err, req, res, next) => {
   res.status(500).json({ message: err.message })
 })
 
-module.exports = app
+export default app;
 
 
 

@@ -1,4 +1,4 @@
-const Joi = require('joi');
+import Joi from 'joi';
 
 const addSchema = Joi.object({
   name: Joi.string().min(3).required(),
@@ -6,4 +6,5 @@ const addSchema = Joi.object({
   phone: Joi.string().min(6).required(),
 });
 
-module.exports = { addSchema };
+export { addSchema };
+
