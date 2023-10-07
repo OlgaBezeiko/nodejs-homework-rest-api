@@ -1,6 +1,4 @@
-import HttpError from './HttpError';
-import ctrlWrapper from './ctrlWrapper';
+const HttpError = require('./HttpError');
+const ctrlWrapper = require('./ctrlWrapper');
 
-
-export { HttpError, ctrlWrapper };
-
+module.exports = { HttpError, ctrlWrapper };

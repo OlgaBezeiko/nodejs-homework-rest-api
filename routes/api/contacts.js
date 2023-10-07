@@ -1,8 +1,8 @@
-import express from 'express';
+const express = require('express');
 
-import ctrl from '../../controllers/contacts';
-import { validateBody } from '../../middlewares/validateBody';
-import { addSchema } from '../../schemas/contacts';
+const ctrl = require('../../controllers/contacts');
+const { validateBody } = require('../../middlewares/validateBody');
+const { addSchema } = require('../../schemas/contacts');
 
 const router = express.Router();
 
@@ -16,4 +16,4 @@ router.post('/', validateBody(addSchema), ctrl.addContact);
 
 router.put('/:contactId', validateBody(addSchema), ctrl.updateContact);
 
-export default router;
+module.exports = router;
